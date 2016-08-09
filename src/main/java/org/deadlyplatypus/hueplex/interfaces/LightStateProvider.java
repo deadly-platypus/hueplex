@@ -1,9 +1,10 @@
 /**
  * 
  */
-package hueplex.interfaces;
+package org.deadlyplatypus.hueplex.interfaces;
 
 import com.philips.lighting.model.PHLightState;
+
 
 /**
  * @author Derrick

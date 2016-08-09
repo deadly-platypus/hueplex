@@ -1,6 +1,7 @@
-package hueplex;
+package org.deadlyplatypus.hueplex;
 
 import java.awt.Color;
+
 
 public class ColorSample {
   protected Color rgb;
