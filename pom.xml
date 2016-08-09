@@ -36,6 +36,19 @@
 			<artifactId>slf4j-api</artifactId>
 			<version>1.7.21</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.ow2.chameleon.fuchsia.base.philips-hue/org.ow2.chameleon.fuchsia.base.philips-hue.huedsk-bundle -->
+		<dependency>
+			<groupId>org.ow2.chameleon.fuchsia.base.philips-hue</groupId>
+			<artifactId>org.ow2.chameleon.fuchsia.base.philips-hue.huedsk-bundle</artifactId>
+			<version>0.0.4</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.ow2.chameleon.fuchsia.base.philips-hue/philips-hue-sdk-resources -->
+		<dependency>
+			<groupId>org.ow2.chameleon.fuchsia.base.philips-hue</groupId>
+			<artifactId>philips-hue-sdk-resources</artifactId>
+			<version>0.0.3</version>
+			<type>pom</type>
+		</dependency>
 	</dependencies>
 	<scm>
 		<url>https://github.com/deadly-platypus/hueplex.git</url>
