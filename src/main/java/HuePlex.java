@@ -26,7 +26,7 @@ public class HuePlex {
       provider =
           new M4VProvider("C:\\Users\\Derrick\\Videos\\Wall-e-1.m4v", new Point(0, 0),
               new Dimension(100, 100));
-      PHLightState sample = provider.getLightStateAtOffset(0);
+      PHLightState sample = provider.getLightStateAtOffset(1800000);
       System.out.println("Hue: " + sample.getHue());
       System.out.println("Sat: " + sample.getSaturation());
       System.out.println("Bri: " + sample.getBrightness());

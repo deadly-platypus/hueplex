@@ -37,7 +37,8 @@ public class M4VProvider extends VideoProvider {
   public PHLightState getLightStateAtOffset(long offset) {
     try {
       this.grabber.start();
-      this.grabber.setFrameNumber(calculateFrameNumber(offset));
+      int frameNumber = calculateFrameNumber(offset);
+      this.grabber.setFrameNumber(frameNumber);
       BufferedImage img = this.converter.convert(this.grabber.grab());
       ColorSample sample = super.getDominantColor(img);
       PHLightState result = new PHLightState();
@@ -71,7 +72,7 @@ public class M4VProvider extends VideoProvider {
    * @return
    */
   protected int calculateFrameNumber(long offset) {
-    return (int) (Math.floor(offset / 1000.0 * this.grabber.getFrameRate()));
+    return (int) (Math.floor(offset / 1000l * this.grabber.getFrameRate()));
   }
 
   @Override
