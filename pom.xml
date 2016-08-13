@@ -13,7 +13,20 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.mainclass>HuePlex</project.mainclass>
+		<javacv.version>1.2</javacv.version>
+		<javacpp.version>1.2.1</javacpp.version>
 	</properties>
+
+	<repositories>
+		<repository>
+			<id>oss-sonatype</id>
+			<name>oss-sonatype</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
@@ -28,20 +41,50 @@
 		<dependency>
 			<groupId>org.bytedeco</groupId>
 			<artifactId>javacv</artifactId>
-			<version>1.2</version>
+			<version>${javacv.version}</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.bytedeco.javacpp-presets/ffmpeg -->
+		<dependency>
+			<groupId>org.bytedeco.javacpp-presets</groupId>
+			<artifactId>ffmpeg</artifactId>
+			<version>3.0.2-1.2.1-SNAPSHOT</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.bytedeco.javacpp-presets/opencv -->
+		<dependency>
+			<groupId>org.bytedeco.javacpp-presets</groupId>
+			<artifactId>opencv</artifactId>
+			<version>3.1.0-1.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.bytedeco</groupId>
+			<artifactId>javacpp</artifactId>
+			<version>${javacpp.version}</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 			<version>1.7.21</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.jogamp.jogl/jogl-all-main -->
+		<dependency>
+			<groupId>org.jogamp.jogl</groupId>
+			<artifactId>jogl-all-main</artifactId>
+			<version>2.3.2</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/org.ow2.chameleon.fuchsia.base.philips-hue/org.ow2.chameleon.fuchsia.base.philips-hue.huedsk-bundle -->
 		<dependency>
 			<groupId>org.ow2.chameleon.fuchsia.base.philips-hue</groupId>
 			<artifactId>org.ow2.chameleon.fuchsia.base.philips-hue.huedsk-bundle</artifactId>
 			<version>0.0.4</version>
 		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/org.ow2.chameleon.fuchsia.base.philips-hue/philips-hue-sdk-resources -->
 		<dependency>
 			<groupId>org.ow2.chameleon.fuchsia.base.philips-hue</groupId>

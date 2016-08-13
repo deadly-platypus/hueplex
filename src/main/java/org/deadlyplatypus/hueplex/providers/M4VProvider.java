@@ -11,7 +11,6 @@ import org.bytedeco.javacv.FrameGrabber.Exception;
 import org.bytedeco.javacv.Java2DFrameConverter;
 import org.deadlyplatypus.hueplex.ColorSample;
 import org.deadlyplatypus.hueplex.Constants;
-import org.deadlyplatypus.hueplex.exceptions.InvalidFileException;
 
 import com.philips.lighting.model.PHLight.PHLightColorMode;
 import com.philips.lighting.model.PHLightState;
@@ -23,7 +22,7 @@ public class M4VProvider extends VideoProvider {
   public M4VProvider(String videoLocation, Point origin, Dimension dim) throws IOException {
     super(videoLocation, origin, dim);
     if (!videoLocation.endsWith("m4v")) {
-      throw new InvalidFileException();
+      throw new IOException("Invalid video format");
     }
     this.grabber = new FFmpegFrameGrabber(this.videoLocation);
     this.converter = new Java2DFrameConverter();
