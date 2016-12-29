@@ -24,11 +24,17 @@ public class PlexWebAPIClient {
     this.serverRoot.property(ACCEPT_HEADER, MediaType.APPLICATION_JSON);
   }
 
-  public PlexIdentity getServerIdentity() {
-    WebTarget get = this.serverRoot.path(IDENTITY_PATH);
-    PlexIdentity ident =
-        (PlexIdentity) get.request().header(ACCEPT_HEADER, MediaType.APPLICATION_JSON).buildGet()
-            .invoke(PlexIdentity.class);
+  public PlexIdentity getServerIdentity() throws Exception {
+    try {
+      WebTarget get = this.serverRoot.path(IDENTITY_PATH);
+      PlexIdentity ident =
+          (PlexIdentity) get.request().header(ACCEPT_HEADER, MediaType.APPLICATION_JSON).buildGet()
+              .invoke(PlexIdentity.class);
+    } catch (Exception e) {
+      this.logger.debug(e.getMessage());
+      System.err.println("Could not get Plex Identity.");
+      throw e;
+    }
 
     return null;
   }
