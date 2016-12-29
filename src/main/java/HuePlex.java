@@ -94,8 +94,8 @@ public class HuePlex {
     if (cmd.hasOption("u")) {
       properties.setProperty("user", cmd.getOptionValue("u"));
     }
-    if (cmd.hasOption("p")) {
-      properties.setProperty("pass", cmd.getOptionValue("p"));
+    if (cmd.hasOption("pass")) {
+      properties.setProperty("pass", cmd.getOptionValue("pass"));
     }
 
     if (!properties.containsKey("server")) {
@@ -126,7 +126,7 @@ public class HuePlex {
         new Option("p", "port", true, "The port that the server uses. Defaults to " + serverPort
             + ".");
     Option username = new Option("u", "user", true, "Authorized username.");
-    Option password = new Option("p", "password", true, "Password for user.");
+    Option password = new Option("pass", "password", true, "Password for user.");
     Option help = new Option("h", "help", false, "Prints a help message.");
 
     Options options = new Options();
