@@ -133,8 +133,8 @@ public abstract class VideoProvider implements LightStateProvider {
    * @return
    */
   protected static Integer calculateBrightness(Color c) {
-    return (int) Math.sqrt(c.getRed() * c.getRed() * .241 + c.getGreen() * c.getGreen() * .691
-        + c.getBlue() * c.getBlue() * .068);
+    return new Integer((int) Math.sqrt(c.getRed() * c.getRed() * .241 + c.getGreen() * c.getGreen()
+        * .691 + c.getBlue() * c.getBlue() * .068));
   }
 
   /**

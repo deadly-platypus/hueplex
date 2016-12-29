@@ -1,5 +1,10 @@
 package org.deadlyplatypus.hueplex.web.pojo;
 
+/**
+ * Everything the Plex Media Server API returns is of this form.
+ * @author Derrick
+ *
+ */
 public abstract class PlexResponse {
   protected String _elementType;
 

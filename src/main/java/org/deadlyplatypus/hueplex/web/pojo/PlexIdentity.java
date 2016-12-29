@@ -1,5 +1,10 @@
 package org.deadlyplatypus.hueplex.web.pojo;
 
+/**
+ * Represents one Plex Media Server
+ * @author Derrick
+ *
+ */
 public class PlexIdentity extends PlexResponse {
   protected String machineIdentifier;
   protected String version;
